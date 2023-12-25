@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Whiteboard from '../whiteboard';
+import Whiteboard from './whiteboard';
 import logo from '/logo.svg';
-// import { Button } from '../ui/button';
+import { Button } from '../ui/button';
 
 const BoardPage = () => {
   const [brushSize, setBrushSize] = useState(5);
@@ -72,13 +72,13 @@ const BoardPage = () => {
                   Color
                 </label>
               </div>
-              {/* <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4">
                 <Button>Undo</Button>
                 <Button>Redo</Button>
               </div>
               <div className="flex items-center gap-4">
                 <Button variant="destructive">Clear</Button>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

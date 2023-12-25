@@ -1,10 +1,17 @@
+import React from 'react';
 import { useState } from 'react';
 import Create from "./create";
 import Join from "./join";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
-const Room = () => {
+interface RoomProps {
+  uuid: string;
+  socket: any; 
+  setUser:any
+}
+
+const Room: React.FC<RoomProps> = ({ uuid ,socket ,setUser }) => {
   const [activeComponent, setActiveComponent] = useState('create');
 
   const handleToggle = (component: string) => {
@@ -33,7 +40,7 @@ const Room = () => {
             Join Room
           </div>
           <div className="col-span-2">
-            {activeComponent === 'create' ? <Create /> : <Join />}
+            {activeComponent === 'create' ? <Create uuid={uuid} socket={socket} setUser={setUser}/> : <Join socket={socket} setUser={setUser} uuid={uuid} />}
           </div>
         </div>
       </div>
