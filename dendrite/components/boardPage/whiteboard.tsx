@@ -35,7 +35,7 @@ const Whiteboard: React.FC<WhiteboardProps> = ({ brushSize, color }) => {
   }, [brushSize, color]);
 
   return (
-    <canvas id="whiteboard" width="800" height="600" className='' style={{ border: '2px solid #000' }}></canvas>
+    <canvas id="whiteboard" width="800" height="600" className='' style={{ border: '2px solid #000', borderRadius:'20px'}} ></canvas>
 
   );
 };

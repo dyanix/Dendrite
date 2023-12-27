@@ -9,7 +9,7 @@ const BoardPage = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center h-screen ">
+      <div className="flex items-center justify-center h-screen  bg-slate-600">
         <div className="bg-gray-800 p-2 text-white mb-4 rounded-md fixed top-0 left-1/2 transform -translate-x-1/2 mt-10">
           <div className="container mx-auto flex justify-between items-center">
             <div className="text-lg font-semibold mr-7">
@@ -83,7 +83,7 @@ const BoardPage = () => {
           </div>
         </div>
 
-        <div className=" mt-32 ">
+        <div className=" mt-32   ">
           <Whiteboard brushSize={brushSize} color={color} />
         </div>
       </div>
